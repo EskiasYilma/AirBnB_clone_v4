@@ -68,6 +68,10 @@ button:hover {
     width: 0px;
 }
 
+.amenities h4 {
+    width: max-content;
+}
+
 .amenities .popover {
     padding: 10px 0;
     margin-left: -5px;
@@ -76,6 +80,10 @@ button:hover {
 
 .amenities .popover ul{
     margin: 0px;
+}
+
+.amenities .popover ul li input{
+    left: -10px;
 }
 
 .locations .popover {
