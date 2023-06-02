@@ -155,8 +155,8 @@ No known bugs at this time.
 
 ## Authors
 Eskias Yilma - [Github](https://github.com/EskiasYilma) / [Twitter](https://twitter.com/eskiasyilma)
+
 Peter Okon
 
-Second part of Airbnb: Joann Vuong
 ## License
 Public Domain. No copy write protection. 
