@@ -2,6 +2,7 @@
 'use strict';
 
 $(document).ready(function () {
+  // citiesAndStates();
   apiStatus();
   getPlacesList();
   getPlacesByAmenity();
@@ -23,6 +24,36 @@ $(document).ready(function () {
       selectedAmenitiesElement.textContent = displayedAmenities + '...';
     } else {
       selectedAmenitiesElement.textContent = selectedAmenities.join(', ');
+    }
+  }
+  const selectedStatesOrCities = [];
+  $('.locations .popover ul li h2 input[type=checkbox]').change(function () {
+    const chkdSt = $(this).attr('data-id');
+    const stName = $(this).attr('data-name');
+    if (this.checked && $.inArray(chkdSt, selectedStatesOrCities) === -1) {
+      selectedStatesOrCities.push(stName);
+    } else {
+      selectedStatesOrCities.splice(selectedStatesOrCities.indexOf(stName), 1);
+    }
+    updateSelectedStates();
+  });
+  $('.locations .popover ul li ul li input[type=checkbox]').change(function () {
+    const chkdCt = $(this).attr('data-id');
+    const ctName = $(this).attr('data-name');
+    if (this.checked && $.inArray(chkdCt, selectedStatesOrCities) === -1) {
+      selectedStatesOrCities.push(ctName);
+    } else {
+      selectedStatesOrCities.splice(selectedStatesOrCities.indexOf(ctName), 1);
+    }
+    updateSelectedStates();
+  });
+  function updateSelectedStates () {
+    const selectedStatesOrCitiesElement = document.getElementById('loc_h4');
+    if (selectedStatesOrCities.join(', ').length > 29) {
+      const displayedStates = selectedStatesOrCities.join(', ').substring(0, 29);
+      selectedStatesOrCitiesElement.textContent = displayedStates + '...';
+    } else {
+      selectedStatesOrCitiesElement.textContent = selectedStatesOrCities.join(', ');
     }
   }
 });

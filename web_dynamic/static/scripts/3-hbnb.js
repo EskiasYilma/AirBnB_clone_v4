@@ -5,7 +5,7 @@ $(document).ready(function () {
   apiStatus();
   getPlacesList();
   const selectedAmenities = [];
-  $('ul li input[type=checkbox]').change(function () {
+  $('.amenities .popover ul li input[type=checkbox]').change(function () {
     const chkdAm = $(this).attr('data-id');
     const amName = $(this).attr('data-name');
     if (this.checked && $.inArray(chkdAm, selectedAmenities) === -1) {
