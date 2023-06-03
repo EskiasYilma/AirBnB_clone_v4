@@ -156,7 +156,5 @@ No known bugs at this time.
 ## Authors
 Eskias Yilma - [Github](https://github.com/EskiasYilma) / [Twitter](https://twitter.com/eskiasyilma)
 
-Peter Okon
-
 ## License
 Public Domain. No copy write protection. 
